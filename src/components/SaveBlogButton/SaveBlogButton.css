@@ -1,0 +1,14 @@
+.hidden-save-btn {
+    width: 130px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 7px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,19 @@
+.auth-nav-btn{
+    background-color: #4f3085;
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.auth-nav-btn:hover{
+    background-color: rgba(0,0,0,0);
+    color: #4f3085;
+    border: 1px solid #4f3085;
+    scale : 1.03;
+    transition: scale 0.3s linear;
+}

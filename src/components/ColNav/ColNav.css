@@ -1,0 +1,22 @@
+.col-nav-text-hide {
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 2px solid #4F3085;
+    padding: 8px 15px;
+    box-sizing: content-box;
+}
