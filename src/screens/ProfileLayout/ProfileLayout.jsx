@@ -23,12 +23,12 @@ function ProfileLayout() {
   return (
     <>
       <article className="w-[100%] min-h-[100vh] max-h-[fit-content] flex gap-2 bg-[#f2f2f2]">
-        <article className="max-h-[fit-content] flex gap-2 ">
+        <article className="max-h-[fit-content] flex">
           <div className="col-nav-container">
             <ColNav id={id} />
           </div>
         </article>
-        <article className="w-[100%] min-h-[100vh] max-h-[fit-content] flex gap-2">
+        <article className="w-[100%] min-h-[100vh] max-h-[fit-content] flex">
           <Outlet />
         </article>
       </article>

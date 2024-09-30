@@ -26,3 +26,20 @@
 .disabled {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media(min-width : 200px)and (max-width : 550px) {
+    .form-container{
+        width: 100%;
+        padding: 10px 15px;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .main-heading{
+        font-size: 30px;
+    }
+
+    .text{
+        font-size: 12px;
+    }
+}

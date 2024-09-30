@@ -17,3 +17,13 @@
     scale : 1.03;
     transition: scale 0.3s linear;
 }
+
+#hamMenu-btn-nav{
+    display: none;
+}
+
+@media (min-width : 200px) and (max-width : 550px){
+    #hamMenu-btn-nav{
+        display : block ;
+    }
+}

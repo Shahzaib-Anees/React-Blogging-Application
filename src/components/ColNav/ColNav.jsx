@@ -32,13 +32,8 @@ function ColNav({ id }) {
     spanText.style.display = "none";
   };
   return (
-    <article className="flex w-[fit-content] h-[100%] top-0 left-0 overflow-visible gap-2 py-5 bg-[#272727] text-[#fff]">
+    <article id="col-nav-container" className="flex w-[fit-content] h-[100%] top-0 left-0 overflow-visible gap-2 py-5 bg-[#272727] text-[#fff]">
       <div className="flex flex-col gap-[30px]">
-        <div className="w-[100%] flex items-center justify-center overflow-hidden cursor-pointer py-2 px-3">
-          <button className="flex rounded bg-[rgba(0,0,0,0.4)]">
-            <FaBars className="text-[20px]" />
-          </button>
-        </div>
         <div className="flex flex-col gap-[50px] py-4">
           <div
             className="relative flex gap-2 items-center cursor-pointer p-2"

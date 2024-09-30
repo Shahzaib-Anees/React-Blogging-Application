@@ -1,0 +1,14 @@
+@media(min-width : 200px)and (max-width : 550px){
+    .main-container{
+        width: 100%;
+        height: 100%;
+        padding: 10px 2px;
+        gap: 0px;
+    }
+
+    .form-container{
+        width: 100%;
+        height: 100%;
+        /* padding: 10px 2px; */
+    }
+}

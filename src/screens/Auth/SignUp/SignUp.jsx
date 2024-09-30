@@ -72,7 +72,7 @@ function SignUp() {
           </p>
         </div>
         <div
-          className="lg:w-[550px] sm:w-[90%] h-[fit-content] flex flex-col gap-2 justify-center items-center bg-[#fff] rounded-md py-8 px-8 absolute top-[46%] left-[50%] translate-x-[-50%]"
+          className="form-container lg:w-[550px] sm:w-[90%] h-[fit-content] flex flex-col gap-2 justify-center items-center bg-[#fff] rounded-md py-8 px-8 absolute top-[46%] left-[50%] translate-x-[-50%]"
           style={{
             boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.2)",
           }}

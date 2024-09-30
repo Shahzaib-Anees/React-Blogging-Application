@@ -6,13 +6,27 @@ import {
   signOutUser,
   getSingleData,
 } from "../../configs/firebase/firebaseMethods";
-import { FaBloggerB, FaRegBookmark } from "react-icons/fa6";
+import { FaBars, FaBloggerB, FaRegBookmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 function Navbar() {
   const [checkUser, setCheckUser] = useState(false);
   const [userData, setUserData] = useState(null);
   const [userID, setUserID] = useState(null);
+  const [hamMenuCall, setHamMenuCall] = useState(false);
+
+  // Toggle Column Navigation Menu
+  const colNav = document.getElementById("col-nav-container");
+  const toggelColNav = () => {
+    console.log(colNav);
+    setHamMenuCall(!hamMenuCall);
+    console.log(hamMenuCall);
+    if (hamMenuCall) {
+      colNav.style.display = "flex";
+    } else {
+      colNav.style.display = "none";
+    }
+  };
   const getUserData = async (id) => {
     const userData = await getSingleData("users", id);
     if (userData) {
@@ -51,8 +65,13 @@ function Navbar() {
       }}
     >
       <div className="flex-1">
-        <FaBloggerB className="text-5xl text-[#4f3085]" />
-        <span className="text-3xl px-1 font-bold">Blogs</span>
+        <div className="flex items-center gap-2">
+          <button className="flex" id="hamMenu-btn-nav" onClick={toggelColNav}>
+            <FaBars className="text-[20px]" />
+          </button>
+          <FaBloggerB className="text-5xl text-[#4f3085]" />
+          <span className="text-3xl px-1 font-bold">Blogs</span>
+        </div>
       </div>
       {checkUser ? (
         <div className="flex-none">
@@ -80,7 +99,9 @@ function Navbar() {
                 </span>
                 <div className="card-actions">
                   <button className="btn btn-primary btn-block">
-                    <Link to ={`Profile/${userID}/SavedBlogs`}>Check Saved Blogs</Link>
+                    <Link to={`Profile/${userID}/SavedBlogs`}>
+                      Check Saved Blogs
+                    </Link>
                   </button>
                 </div>
               </div>

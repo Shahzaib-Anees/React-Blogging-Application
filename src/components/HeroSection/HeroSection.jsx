@@ -2,6 +2,7 @@ import React from "react";
 import "./HeroSection.css";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../configs/firebase/firebaseConfig";
+import RecentSection from "../RecentSection/RecentSection";
 function HeroSection() {
   const navigate = useNavigate();
   const navigateUser = () => {
@@ -35,6 +36,7 @@ function HeroSection() {
           </button>
         </div>
       </article>
+        <RecentSection />
     </>
   );
 }

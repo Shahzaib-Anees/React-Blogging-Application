@@ -8,6 +8,7 @@ import {
   uploadImage,
   imageDownloadUrl,
 } from "../../configs/firebase/firebaseMethods";
+import "./BlogCreator.css";
 function BlogCreator() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -98,7 +99,7 @@ function BlogCreator() {
   };
   return (
     <>
-      <article className="w-[100%] min-h-[45vh] max-h-[fit-content] flex flex-col items-center gap-5 py-8 px-3 bg-[#f2f2f2]">
+      <article className="main-container w-[100%] min-h-[45vh] max-h-[fit-content] flex flex-col items-center gap-5 py-8 px-3 bg-[#f2f2f2]">
         <div className="w-[fit-content] h-[fit-content] flex flex-col gap-2 items-center lg:w-[60%] sm:w-[100%]">
           <h1 className="text-4xl text-[#4f3085] font-bold">Create Blog</h1>
           <p className="text-[15px] text-[#272727] font-semibold text-center">
@@ -110,7 +111,7 @@ function BlogCreator() {
           </p>
         </div>
         <div
-          className="lg:w-[550px] sm:w-[90%] h-[fit-content] flex flex-col gap-2 justify-center items-center bg-[#fff] rounded-md py-8 px-8"
+          className="form-container lg:w-[550px] sm:w-[90%] h-[fit-content] flex flex-col gap-2 justify-center items-center bg-[#fff] rounded-md py-8 px-8"
           style={{
             boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.2)",
           }}
