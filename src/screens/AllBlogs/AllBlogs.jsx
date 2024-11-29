@@ -7,7 +7,6 @@ function AllBlogs() {
   const [allBlogData, setAllBlogData] = useState([]);
   useEffect(() => {
     const getAllData = async () => {
-      const blogCollection = [];
       try {
         const data = await getAllDocuments("blogs");
         setAllBlogData([...data]);
@@ -26,7 +25,10 @@ function AllBlogs() {
   return (
     <>
       <article className="flex flex-col gap-5 bg-[#f2f2f2] h-[fit-content] py-5 px-8">
-        <Link className="text-[17px] font-bold rounded bg-[rgba(0,0,0,0.1)] w-[fit-content] p-3 text-[#545454] flex items-center gap-1" to="/">
+        <Link
+          className="text-[17px] font-bold rounded bg-[rgba(0,0,0,0.1)] w-[fit-content] p-3 text-[#545454] flex items-center gap-1"
+          to="/"
+        >
           <FaAngleLeft />
         </Link>
         <div className="flex flex-col gap-2 items-center justify-center">
@@ -43,7 +45,11 @@ function AllBlogs() {
         <div className="flex flex-wrap gap-8 items-center justify-center py-2 px-4">
           {allBlogData.length > 0 ? (
             allBlogData.map((blog) => {
-              return <BlogCard key={blog.blogId} blogId={blog.blogId} />;
+              return (
+                <>
+                  <BlogCard key={blog?.blogId} blogId={blog?.blogId} />
+                </>
+              );
             })
           ) : (
             <h1>No Blogs Found</h1>

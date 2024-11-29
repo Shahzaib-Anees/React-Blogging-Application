@@ -56,7 +56,8 @@ function ProfileDashboard() {
                 return (
                   <ProfileBlogCard
                     key={blog?.blogId}
-                    id={blog?.blogId}
+                    id={id}
+                    blogId={blog?.blogId}
                     blogTitle={blog?.blogTitle}
                     blogDescription={blog?.blogDescription}
                     blogImage={blog?.blogImage}

@@ -11,25 +11,22 @@ function BlogCard() {
     const currentUser = auth.currentUser?.uid;
     if (currentUser) {
       console.log("User hai");
+      (async () => {
+        try {
+          const data = await getSingleData("blogs", blogId);
+          setBlog(data);
+          console.log(data);
+          console.log(blog);
+        } catch (error) {
+          console.log(error);
+        }
+      })();
     } else {
       console.log("User nahi hai");
       navigate("/Signin");
       return;
     }
   }, []);
-  useEffect(() => {
-    const getBlogData = async () => {
-      try {
-        const data = await getSingleData("blogs", blogId);
-        setBlog(data);
-        console.log(data);
-        console.log(blog);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getBlogData();
-  });
 
   useEffect(() => {
     console.log("Blog Mounted");

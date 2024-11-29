@@ -67,7 +67,7 @@ function BlogCard({
         </div>
         <div className="flex items-center justify-end px-5">
           <button className="bg-[#542F84] text-[#fff] py-1 px-5 rounded font-bold">
-            <Link to={`/SingleBlog/${id}`}>Read</Link>
+            <Link to={`/SingleBlog/${blogId}`}>Read</Link>
           </button>
         </div>
         {updationState === "true" ? (
